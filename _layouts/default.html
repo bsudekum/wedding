@@ -1,0 +1,33 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+  	<title>Site Title {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
+  	<meta charset='UTF-8'/>
+  	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  	<link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
+  	<link href='{{site.baseurl}}/site.css' rel='stylesheet' />
+</head>
+<body>
+
+<section class='col7 margin2 pad2y pad-bottom'>
+
+    <div class='header fr'>
+    	<div class='nav'>
+        	<a href='{{site.baseurl}}/' class='button icon home'></a>
+         	<a href='{{site.baseurl}}/schedule' class='button'>Schedule</a>
+         	<a href='{{site.baseurl}}/hotel' class='button'>Hotel</a>
+     	</div>
+   </div>
+
+	<div class='prose'>
+		<h2>Lauren and David's Wedding</h2>
+	</div>
+
+	{{content}}
+
+</section>
+ 
+<script src='{{site.baseurl}}/site.js'></script>
+</body>
