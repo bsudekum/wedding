@@ -1913,3 +1913,12 @@ img.inline,
   .footer-copyright a,
   .noprint { display: none;}
   }
+
+/*CUSTOM*/
+.button.icon:empty {
+  padding: 6px;
+}
+button, .button, input[type=button], input[type=submit] {
+  height: 30px;
+  padding: 6px 15px;
+}

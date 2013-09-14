@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<title>Site Title {% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title>
+  	<!-- <title>{% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title> -->
+    <title>{{page.title}}</title>
   	<meta charset='UTF-8'/>
   	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   	<link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
@@ -11,19 +12,22 @@
 </head>
 <body>
 
-<section class='col7 margin2 pad2y pad-bottom'>
+<section class='margin2 pad4 col8 clearfix'>
 
     <div class='header fr'>
     	<div class='nav'>
-        	<a href='{{site.baseurl}}/' class='button icon home'></a>
-         	<a href='{{site.baseurl}}/schedule' class='button'>Schedule</a>
-         	<a href='{{site.baseurl}}/hotel' class='button'>Hotel</a>
+        	<a href='{{site.baseurl}}/' class='button icon home {% if page.url == '/index.html' %}active{% endif %}'></a>
+         	<a href='{{site.baseurl}}/schedule' class='button {% if page.url == '/schedule' %}active{% endif %}'>Schedule</a>
+         	<a href='{{site.baseurl}}/hotel' class='button {% if page.url == '/hotel' %}active{% endif %}'>Hotel</a>
+          <a href='{{site.baseurl}}/registry' class='button {% if page.url == '/registry' %}active{% endif %}'>Registry</a>
      	</div>
    </div>
 
 	<div class='prose'>
 		<h2>Lauren and David's Wedding</h2>
 	</div>
+
+  {% include update.html %}
 
 	{{content}}
 
