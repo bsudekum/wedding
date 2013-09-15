@@ -3,31 +3,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  	<!-- <title>{% if page.url != '/index.html' %}| {{page.title}}{% endif %}</title> -->
     <title>{{page.title}}</title>
   	<meta charset='UTF-8'/>
   	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  	<link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
+  	<link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico' type='image/x-icon' />
+    {% if page.url == '/places' %}
+      <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+      <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+    {% endif %}
   	<link href='{{site.baseurl}}/site.css' rel='stylesheet' />
 </head>
 <body>
 
-<section class='margin2 pad4 col8 clearfix'>
+<section class='margin2 pad4y col8 clearfix'>
 
     <div class='header fr'>
     	<div class='nav'>
         	<a href='{{site.baseurl}}/' class='button icon home {% if page.url == '/index.html' %}active{% endif %}'></a>
          	<a href='{{site.baseurl}}/schedule' class='button {% if page.url == '/schedule' %}active{% endif %}'>Schedule</a>
-         	<a href='{{site.baseurl}}/hotel' class='button {% if page.url == '/hotel' %}active{% endif %}'>Hotel</a>
+         	<a href='{{site.baseurl}}/places' class='button {% if page.url == '/places' %}active{% endif %}'>Places</a>
           <a href='{{site.baseurl}}/registry' class='button {% if page.url == '/registry' %}active{% endif %}'>Registry</a>
+          <a href='{{site.baseurl}}/update' class='button {% if page.url == '/update' %}active{% endif %}'>Updates</a>
      	</div>
    </div>
 
 	<div class='prose'>
-		<h2>Lauren and David's Wedding</h2>
+		<h2 class='main-title'>{{page.title}}</h2>
 	</div>
 
-  {% include update.html %}
+  {% if page.url != '/update' %}
+    {% include update.html %}
+  {% endif %}
 
 	{{content}}
 
