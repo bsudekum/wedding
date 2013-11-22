@@ -1,4 +1,4 @@
 auto: true
 server: true
-baseurl: http://visuallybs.com/wedding
+baseurl: 
 permalink: /:title
