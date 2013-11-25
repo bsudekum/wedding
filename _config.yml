@@ -1,2 +1,4 @@
-baseurl: 
+auto: true
+server: true
+baseurl:
 permalink: /:title
