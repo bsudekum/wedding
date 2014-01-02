@@ -18,6 +18,8 @@ g.push(m(c[d],"p-author")[0]),f.push(m(c[d],"dt-updated")[0]),0<m(c[d],"retweet-
 k.appendChild(l);k.setAttribute("aria-label",b);f[a]=k}else f[a].textContent=b}q?(b="",p&&(b+='<div class="user">'+v(g[a].innerHTML)+"</div>"),b+='<p class="tweet">'+v(e[a].innerHTML)+"</p>",n&&(b+='<p class="timePosted">'+f[a].getAttribute("aria-label")+"</p>")):e[a].innerText?(b="",p&&(b+='<p class="user">'+g[a].innerText+"</p>"),b+='<p class="tweet">'+e[a].innerText+"</p>",n&&(b+='<p class="timePosted">'+f[a].innerText+"</p>")):(b="",p&&(b+='<p class="user">'+g[a].textContent+"</p>"),b+='<p class="tweet">'+
 e[a].textContent+"</p>",n&&(b+='<p class="timePosted">'+f[a].textContent+"</p>"));c.push(b);a++}if(null==u){e=c.length;g=0;f=document.getElementById(w);for(d="<ul>";g<e;)d+="<li class='note'><strong>Update: </strong>"+c[g]+"</li>",g++;f.innerHTML=d+"</ul>"}else u(c);r=!1;0<h.length&&(twitterFetcher.fetch(h[0].id,h[0].domId,h[0].maxTweets,h[0].enableLinks,h[0].showUser,h[0].showTime,h[0].dateFunction,h[0].showRt,h[0].customCallback),h.splice(0,1))}}}();
 
+$(function(){
+
 if(window.location.pathname == '/update/'){
 	twitterFetcher.fetch('379266648101765120', 'twitter', 100, true, false, false, close);
 	function close(){
@@ -55,7 +57,7 @@ if(window.location.pathname == '/places/'){
 	    }
 	});
 }else{
-	console.log('notplaces')
+	
 }
 
 $('.content-block img').click(function(){
@@ -71,3 +73,8 @@ $('.content-block img').click(function(){
 		$('.black').fadeOut();
 	})
 });
+
+var height = $('.bio').height();
+$('.team').css('height', height)
+
+})

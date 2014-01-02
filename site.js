@@ -3,6 +3,8 @@
 ;{% include js/jquery.min.js %}
 ;{% include js/tweet.js %}
 
+$(function(){
+
 if(window.location.pathname == '/update/'){
 	twitterFetcher.fetch('379266648101765120', 'twitter', 100, true, false, false, close);
 	function close(){
@@ -40,7 +42,7 @@ if(window.location.pathname == '/places/'){
 	    }
 	});
 }else{
-	console.log('notplaces')
+	
 }
 
 $('.content-block img').click(function(){
@@ -56,3 +58,8 @@ $('.content-block img').click(function(){
 		$('.black').fadeOut();
 	})
 });
+
+var height = $('.bio').height();
+$('.team').css('height', height)
+
+})
