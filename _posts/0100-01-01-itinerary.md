@@ -3,10 +3,6 @@ layout: default
 title: Itinerary
 ---
 
-# Itineray
-
-<br>
-
 <div class='keyline-all col11'>
 
   <div class='clearfix keyline-bottom'>
