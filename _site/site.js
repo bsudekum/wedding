@@ -17,6 +17,97 @@ document.createElement("div");c.innerHTML=e.body;"undefined"===typeof c.getEleme
 g.push(m(c[d],"p-author")[0]),f.push(m(c[d],"dt-updated")[0]),0<m(c[d],"retweet-credit").length?a.push(!0):a.push(!1),d++;e.length>j&&(e.splice(j,e.length-j),g.splice(j,g.length-j),f.splice(j,f.length-j),a.splice(j,a.length-j));c=[];d=e.length;for(a=0;a<d;){if("string"!==typeof s){var b=new Date(f[a].getAttribute("datetime").replace(/-/g,"/").replace("T"," ").split("+")[0]),b=s(b);f[a].setAttribute("aria-label",b);if(e[a].innerText)if(t)f[a].innerText=b;else{var k=document.createElement("p"),l=document.createTextNode(b);
 k.appendChild(l);k.setAttribute("aria-label",b);f[a]=k}else f[a].textContent=b}q?(b="",p&&(b+='<div class="user">'+v(g[a].innerHTML)+"</div>"),b+='<p class="tweet">'+v(e[a].innerHTML)+"</p>",n&&(b+='<p class="timePosted">'+f[a].getAttribute("aria-label")+"</p>")):e[a].innerText?(b="",p&&(b+='<p class="user">'+g[a].innerText+"</p>"),b+='<p class="tweet">'+e[a].innerText+"</p>",n&&(b+='<p class="timePosted">'+f[a].innerText+"</p>")):(b="",p&&(b+='<p class="user">'+g[a].textContent+"</p>"),b+='<p class="tweet">'+
 e[a].textContent+"</p>",n&&(b+='<p class="timePosted">'+f[a].textContent+"</p>"));c.push(b);a++}if(null==u){e=c.length;g=0;f=document.getElementById(w);for(d="<ul>";g<e;)d+="<li class='note'><strong>Update: </strong>"+c[g]+"</li>",g++;f.innerHTML=d+"</ul>"}else u(c);r=!1;0<h.length&&(twitterFetcher.fetch(h[0].id,h[0].domId,h[0].maxTweets,h[0].enableLinks,h[0].showUser,h[0].showTime,h[0].dateFunction,h[0].showRt,h[0].customCallback),h.splice(0,1))}}}();
+;
+/*global jQuery */
+/*! 
+* Lettering.JS 0.6.1
+*
+* Copyright 2010, Dave Rupert http://daverupert.com
+* Released under the WTFPL license 
+* http://sam.zoy.org/wtfpl/
+*
+* Thanks to Paul Irish - http://paulirish.com - for the feedback.
+*
+* Date: Mon Sep 20 17:14:00 2010 -0600
+*/
+(function($){
+    function injector(t, splitter, klass, after) {
+        var a = t.text().split(splitter), inject = '';
+        if (a.length) {
+            $(a).each(function(i, item) {
+                inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
+            }); 
+            t.empty().append(inject);
+        }
+    }
+     
+    var methods = {
+        init : function() {
+ 
+            return this.each(function() {
+                injector($(this), '', 'char', '');
+            });
+ 
+        },
+ 
+        words : function() {
+ 
+            return this.each(function() {
+                injector($(this), ' ', 'word', ' ');
+            });
+ 
+        },
+         
+        lines : function() {
+ 
+            return this.each(function() {
+                var r = "eefec303079ad17405c889e092e105b0";
+                // Because it's hard to split a <br/> tag consistently across browsers,
+                // (*ahem* IE *ahem*), we replace all <br/> instances with an md5 hash 
+                // (of the word "split").  If you're trying to use this plugin on that 
+                // md5 hash string, it will fail because you're being ridiculous.
+                injector($(this).children("br").replaceWith(r).end(), r, 'line', '');
+            });
+ 
+        }
+    };
+ 
+    $.fn.lettering = function( method ) {
+        // Method calling logic
+        if ( method && methods[method] ) {
+            return methods[ method ].apply( this, [].slice.call( arguments, 1 ));
+        } else if ( method === 'letters' || ! method ) {
+            return methods.init.apply( this, [].slice.call( arguments, 0 ) ); // always pass an array
+        }
+        $.error( 'Method ' +  method + ' does not exist on jQuery.lettering' );
+        return this;
+    };
+ 
+})(jQuery);
+/*
+ * CircleType 0.34
+ * Peter Hrynkow
+ * Copyright 2013, Licensed GPL & MIT
+ *
+*/ 
+$.fn.circleType=function(options){var settings={dir:1,position:'relative'};if(typeof($.fn.lettering)!=='function'){console.log('Lettering.js is required');return;}
+return this.each(function(){if(options){$.extend(settings,options);}
+var elem=this,delta=(180/Math.PI),ch=parseInt($(elem).css('line-height'),10),fs=parseInt($(elem).css('font-size'),10),txt=elem.innerHTML.replace(/^\s+|\s+$/g,'').replace(/\s/g,'&nbsp;'),letters,center;elem.innerHTML=txt
+$(elem).lettering();elem.style.position=settings.position;letters=elem.getElementsByTagName('span');center=Math.floor(letters.length/2)
+var layout=function(){var tw=0,i,offset=0,minRadius,origin,innerRadius,l,style,r,transform;for(i=0;i<letters.length;i++){tw+=letters[i].offsetWidth;}
+minRadius=(tw/Math.PI)/2+ch;if(settings.fluid&&!settings.fitText){settings.radius=Math.max(elem.offsetWidth/2,minRadius);}
+else if(!settings.radius){settings.radius=minRadius;}
+if(settings.dir===-1){origin='center '+(-settings.radius+ch)/fs+'em';}else{origin='center '+settings.radius/fs+'em';}
+innerRadius=settings.radius-ch;for(i=0;i<letters.length;i++){l=letters[i];offset+=l.offsetWidth/2/innerRadius*delta;l.rot=offset;offset+=l.offsetWidth/2/innerRadius*delta;}
+for(i=0;i<letters.length;i++){l=letters[i]
+style=l.style
+r=(-offset*settings.dir/2)+l.rot*settings.dir
+transform='rotate('+r+'deg)';style.position='absolute';style.left='50%';style.marginLeft=-(l.offsetWidth/2)/fs+'em';style.webkitTransform=transform;style.MozTransform=transform;style.OTransform=transform;style.msTransform=transform;style.transform=transform;style.webkitTransformOrigin=origin;style.MozTransformOrigin=origin;style.OTransformOrigin=origin;style.msTransformOrigin=origin;style.transformOrigin=origin;if(settings.dir===-1){style.bottom=0;}}
+if(settings.fitText){if(typeof($.fn.fitText)!=='function'){console.log('FitText.js is required when using the fitText option');}else{$(elem).fitText();$(window).resize(function(){updateHeight();});}}
+updateHeight();};var getBounds=function(elem){var docElem=document.documentElement,box=elem.getBoundingClientRect();return{top:box.top+window.pageYOffset-docElem.clientTop,left:box.left+window.pageXOffset-docElem.clientLeft,height:box.height};};var updateHeight=function(){var mid=getBounds(letters[center]),first=getBounds(letters[0]),h;if(mid.top<first.top){h=first.top-mid.top+first.height;}else{h=mid.top-first.top+first.height;}
+elem.style.height=h+'px';}
+if(settings.fluid&&!settings.fitText){$(window).resize(function(){layout();});}
+if(document.readyState!=="complete"){elem.style.visibility='hidden';$(window).load(function(){elem.style.visibility='visible';layout();});}else{layout();}});};
 
 $(function(){
 
@@ -76,5 +167,7 @@ $('.content-block img').click(function(){
 
 var height = $('.bio').height();
 $('.team').css('height', height)
+
+$('#arc').circleType({radius: 320});
 
 })

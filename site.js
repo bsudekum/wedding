@@ -2,6 +2,7 @@
 ---
 ;{% include js/jquery.min.js %}
 ;{% include js/tweet.js %}
+;{% include js/circle.js %}
 
 $(function(){
 
@@ -61,5 +62,7 @@ $('.content-block img').click(function(){
 
 var height = $('.bio').height();
 $('.team').css('height', height)
+
+$('#arc').circleType({radius: 320});
 
 })

@@ -8,11 +8,6 @@ title: Wedding Party
     <img src="{{post.img}}" class='pad1'>
     <div class='pad2 prose border'>
     	<h2>{{post.name}}</h2>
-    	<ul>
-    		<li>{{post.age}}</li>
-    		<li>{{post.location}}</li>
-    		<li>{{post.relation}}</li>
-    	</ul>
     	<p>{{post.content}}</p>
     </div>
   </div>
