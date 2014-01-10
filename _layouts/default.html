@@ -11,7 +11,7 @@
       <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
       <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
     {% endif %}
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
   	<link href='{{site.baseurl}}/site.css' rel='stylesheet' />
 </head>
 <body>
@@ -23,7 +23,8 @@
     <!-- <a href='{{site.baseurl}}/registry' class='{% if page.url == '/registry' %}active{% endif %}'>Registry</a> -->
     <!-- <a href='{{site.baseurl}}/update' class='{% if page.url == '/update' %}active{% endif %}'>Updates</a> -->
     <a href='{{site.baseurl}}/our-story' class='{% if page.url == '/our-story' %}active{% endif %}'>Our Story</a>
-    <a href='{{site.baseurl}}/wedding-party' class='{% if page.url == '/team' %}active{% endif %}'>Wedding Party</a>
+    <a href='{{site.baseurl}}/chicago' class='{% if page.url == '/chicago' %}active{% endif %}'>Chicago</a>
+    <a href='{{site.baseurl}}/wedding-party' class='{% if page.url == '/wedding-party' %}active{% endif %}'>Wedding Party</a>
   </div>
 
   {% if page.url == '/index.html' %}
@@ -37,7 +38,7 @@
     </div>
   {% endif %}
 
-<div class='clearfix limiter pad'>
+<div class='clearfix limiter pad col8 margin2'>
 
   <!-- {% if page.url != '/update' %}
     {% include update.html %}
