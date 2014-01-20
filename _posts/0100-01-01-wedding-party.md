@@ -7,7 +7,8 @@ title: Wedding Party
   <div class='col12 pad1'>
     <img src="{{post.img}}" class='pad1'>
     <div class='pad2 prose border'>
-    	<h2>{{post.name}}</h2>
+    	<h1>{{post.name}}</h1>
+        <h3>{{post.relation}}</h3>
     	<p>{{post.content}}</p>
     </div>
   </div>

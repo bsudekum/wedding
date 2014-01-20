@@ -7,38 +7,39 @@
   	<meta charset='UTF-8'/>
   	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   	<link rel='shortcut icon' href='{{site.baseurl}}/favicon.ico' type='image/x-icon' />
-    {% if page.url == '/places' %}
-      <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
-      <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+    {% if page.url == '/chicago' %}
+      <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.js'></script>
+      <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.css' rel='stylesheet' />
+      <script type='text/javascript' src='http://maps.stamen.com/js/tile.stamen.js?v1.2.4'></script>
     {% endif %}
-    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:600' rel='stylesheet' type='text/css'>
   	<link href='{{site.baseurl}}/site.css' rel='stylesheet' />
 </head>
 <body>
 
   <div class='nav center pad2y'>
     <a href='{{site.baseurl}}/' class='{% if page.url == '/index.html' %}active{% endif %}'>Home</a>
-    <a href='{{site.baseurl}}/itinerary' class='{% if page.url == '/itinerary' %}active{% endif %}'>Itinerary</a>
+    <!-- <a href='{{site.baseurl}}/itinerary' class='{% if page.url == '/itinerary' %}active{% endif %}'>Itinerary</a> -->
     <!-- <a href='{{site.baseurl}}/places' class='{% if page.url == '/places' %}active{% endif %}'>Places</a> -->
-    <!-- <a href='{{site.baseurl}}/registry' class='{% if page.url == '/registry' %}active{% endif %}'>Registry</a> -->
     <!-- <a href='{{site.baseurl}}/update' class='{% if page.url == '/update' %}active{% endif %}'>Updates</a> -->
     <a href='{{site.baseurl}}/our-story' class='{% if page.url == '/our-story' %}active{% endif %}'>Our Story</a>
     <a href='{{site.baseurl}}/chicago' class='{% if page.url == '/chicago' %}active{% endif %}'>Chicago</a>
     <a href='{{site.baseurl}}/wedding-party' class='{% if page.url == '/wedding-party' %}active{% endif %}'>Wedding Party</a>
+    <a href='http://www.myregistry.com/public/Lauren-Sudekum-David-Painter' target='_blank'>Registry</a>
   </div>
 
   {% if page.url == '/index.html' %}
     <div id='background'>
       <div class="pin-top pad4 col6 center space-top3 margin3 fill-white hero">
-        <div id='arc'>   Lauren & David</div>
+        <div id='arc'>We're getting married!</div>
         <div class='time'>July 12, 2013</div>
-        <h1>We're getting married!</h1>
+        <h1>Lauren & David</h1>
         <div class='place'>Chicago, IL</div>
       </div>
     </div>
   {% endif %}
 
-<div class='clearfix limiter pad col8 margin2'>
+<div class='clearfix limiter pad2y prose'>
 
   <!-- {% if page.url != '/update' %}
     {% include update.html %}
