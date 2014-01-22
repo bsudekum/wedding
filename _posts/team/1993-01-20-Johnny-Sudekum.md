@@ -6,9 +6,8 @@ location: Burlington, Vermont
 categories: team
 relation: Brother of the Bride, Bridesman
 ---
+A junior at University of Vermont, Johnny is as passionate about journalism as he is about skiing. Because what’s good for one Sudekum Brother is good for the other, Johnny and his friends live off campus in “The Buffalo,” the same house that Bobby lived in when he attended UVM. Since it only makes sense, Johnny also lives in Bobby’s old room. 
 
-A talented and passionate web engineer at Mapbox, Lauren and David are fully convinced that Bobby will be extremely famous, wealthy and successful within the decade. Always working on a “project,” Bobby’s work ranges from online maps, data analysis, mobile apps (he sold his first at age 24), and website building. 
+You won’t find a better breakfast sandwich than one from The Buffalo’s kitchen, thoughtfully prepared by Chef Sudekum. Johnny loves balsamic vinegar, classic rock, playing guitar and is definitely the most lovable Sudekum. 
 
-Bobby excels at Lego and IKEA furniture building, downhill skiing and asleep--anywhere, anytime. A budding mixologist (under the tutelage of his future brother-in-law), Bobby has a new-found passion for Manhattans and a never-ending passion for his belt--just ask. 
-
-Bobby just made his second cross-country move in less than 18 months and says he is never again leaving his beloved San Francisco. 
+Johnny is currently studying in Costa Rica, living with locals, practicing his Spanish and studying agriculture. 
