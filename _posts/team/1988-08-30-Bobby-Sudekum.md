@@ -1,7 +1,7 @@
 ---
 name: Bobby Sudekum
 age: 25
-img: /img/bobby.png
+img: /img/bobby.jpg
 location: San Francisco
 categories: team
 relation: Brother of the Bride, Bridesman

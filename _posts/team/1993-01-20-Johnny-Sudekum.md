@@ -1,7 +1,7 @@
 ---
 name: Johnny Sudekum
 age: 21
-img: /img/john.png
+img: /img/john.jpg
 location: Burlington, Vermont
 categories: team
 relation: Brother of the Bride, Bridesman
