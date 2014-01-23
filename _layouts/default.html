@@ -49,5 +49,15 @@
 </div>
  
 <script src='{{site.baseurl}}/site.js'></script>
+{% if page.url == '/our-story' %}
+<script>
+  $('body')
+    .css('background-repeat', 'no-repeat')
+    .css('background-attachment', 'fixed')
+    .css('background-size', 'cover')
+    .css('background-image', 'url(https://i.cloudup.com/S7MqlMDj9W.thumb.jpg)')
+    .css('color','black')
+</script>
+{% endif %}
 </body>
 </html>
