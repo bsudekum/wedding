@@ -110,6 +110,11 @@ if(settings.fluid&&!settings.fitText){$(window).resize(function(){layout();});}
 if(document.readyState!=="complete"){elem.style.visibility='hidden';$(window).load(function(){elem.style.visibility='visible';layout();});}else{layout();}});};
 
 $(function() {
+	$('#openClose').click(function(){
+		$('.mobile-nav').toggleClass('open');
+		$('.limiter,.mobile-nav-button,#background').toggleClass('open');
+	});
+
     $('#arc').circleType({
         radius: 360
     });
@@ -121,5 +126,5 @@ $(function() {
     var markerLayer = L.mapbox.markerLayer()
         .loadURL('https://a.tiles.mapbox.com/v3/laurensud.h1ndfeic/markers.geojson')
         .addTo(map);
-
 });
+

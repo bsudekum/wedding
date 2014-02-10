@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Our Story</title>
-  	<meta charset='UTF-8'/>
-  	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  	<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
-    
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:600' rel='stylesheet' type='text/css'>
-  	<link href='/site.css' rel='stylesheet' />
+    <link href='/site.css' rel='stylesheet' />
+    <script src='/site.js'></script>
 </head>
+
 <body>
 
-  <div class='nav center pad2y'>
-    <a href='/' class=''>Home</a>
-    <!-- <a href='/itinerary' class=''>Itinerary</a> -->
-    <!-- <a href='/places' class=''>Places</a> -->
-    <!-- <a href='/update' class=''>Updates</a> -->
-    <a href='/our-story' class='active'>Our Story</a>
-    <a href='/chicago' class=''>Chicago</a>
-    <a href='/wedding-party' class=''>Wedding Party</a>
-    <a href='http://www.myregistry.com/public/Lauren-Sudekum-David-Painter' target='_blank'>Registry</a>
-  </div>
+    <div class='mobile-nav pad2 dark fill-denim'>
+        <a href='/' class=''>Home</a>
+        <a href='/our-story' class=''>Our Story</a>
+        <a href='/chicago' class=''>Chicago</a>
+        <a href='/wedding-party' class=''>Wedding Party</a>
+        <a href='http://www.myregistry.com/public/Lauren-Sudekum-David-Painter' target='_blank'>Registry</a>
+        <a href='/rsvp' class=''>RSVP</a>
+    </div>
 
-  
+    <div class='nav center pad2y desktop'>
+        <a href='/' class=''>Home</a>
+        <a href='/our-story' class=''>Our Story</a>
+        <a href='/chicago' class=''>Chicago</a>
+        <a href='/wedding-party' class=''>Wedding Party</a>
+        <a href='http://www.myregistry.com/public/Lauren-Sudekum-David-Painter' target='_blank'>Registry</a>
+        <a href='/rsvp' class=''>RSVP</a>
+    </div>
 
-<div class='clearfix limiter pad2y prose'>
+    <div class='nav center pad2y mobile-nav-button'>
+        <a class='button icon menu' id='openClose' class='fl'></a>
+        <a href='/' class='quiet '>Laurend & David</a>
+    </div>
 
-  <!-- 
+    
+
+    <div class='clearfix limiter pad2y prose'>
+
+        <!-- 
     <div class='pad2y center' id='twitter'></div>
    -->
 
-	<h1 id="our_story">Our Story</h1>
+        <h1 id="our_story">Our Story</h1>
 
 <p>It all started in Manhattan, as most good stories do. Lauren had just moved back from Italy and it was her first weekend in the city in January 2011. Lauren’s old advertising friend and David’s co-worker from Unilever were roommates and held a monthly food-themed supper club. Lauren and David were both invited to the cucumber-themed January edition. Lauren brought dip, David brought cocktails.</p>
 
@@ -55,19 +69,14 @@
 <p>David received the message and it finally dawned on him: this was Lauren flirting again! After mulling it over with his roommates, David wrote exactly the response Lauren was hoping for: “I could give you a private lesson, or we could learn from the experts at a speakeasy.” BAM.</p>
 
 <p>An expert date-planner, David pulled off the perfect first date and they’ve been enjoying cocktails together ever since. Everyone is grateful Lauren doesn’t try flirting anymore.</p>
-  
-</div>
- 
-<script src='/site.js'></script>
 
-<script>
-  $('body')
-    .css('background-repeat', 'no-repeat')
-    .css('background-attachment', 'fixed')
-    .css('background-size', 'cover')
-    .css('background-image', 'url(https://i.cloudup.com/bbbukrp8CH-3000x3000.png)')
-    .css('text-shadow','1px 1px white')
-</script>
-
+    </div>
+    
+    <script>
+    $('body').css('background-repeat', 'no-repeat').css('background-attachment', 'fixed').css('background-size', 'cover').css('background-image', 'url(https://i.cloudup.com/bbbukrp8CH-3000x3000.png)');
+    $('.limiter').css('text-shadow', '1px 1px white');
+    </script>
+    
 </body>
+
 </html>
