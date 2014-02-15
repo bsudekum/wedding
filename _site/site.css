@@ -2800,6 +2800,19 @@ strong {
 .mobile-nav-button .button {
     color: #fff;
 }
+.registry img {
+    opacity: .4;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.registry:hover img {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
 @media only screen and (max-width:640px) {
     .mobile-nav, .nav.mobile-nav-button {
         display: block;
@@ -2809,5 +2822,8 @@ strong {
     }
     .hero {
         bottom:0;
+    }
+    .registry img{
+        opacity: 1;
     }
 }
